@@ -1,0 +1,22 @@
+GRAPHQL https://myGrapQL/graphql
+
+type Button {
+  id: ID!
+  grapQlSemaAdresi: String!
+  isActive: Boolean!
+  aktifRenk: Color!
+  pasifRenk: Color!
+  aktifSimge: Icon!
+  pasifSimge: Icon!
+  metin: String
+}
+
+type Query {
+  getAllButtons: [Button]
+  getButtonById(id: ID!): Button
+}
+
+type Mutation {
+  MetinEkle(): Button
+}
+
